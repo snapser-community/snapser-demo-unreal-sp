@@ -1,0 +1,8 @@
+{
+	"BuildId": "33043543",
+	"Modules": 
+	{
+		"Snapser": "UnrealEditor-Snapser.dll",
+		"SnapserPlugin": "UnrealEditor-SnapserPlugin.dll"
+	}
+}

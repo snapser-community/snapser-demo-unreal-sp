@@ -1,0 +1,11 @@
+{
+	"RemapUnityFiles": 
+	{
+		"Module.SnapserPlugin.cpp.obj": [
+			"SnapserPlugin.init.gen.cpp.obj",
+			"SnapserSubsystem.gen.cpp.obj",
+			"SnapserPlugin.cpp.obj",
+			"SnapserSubsystem.cpp.obj"
+		]
+	}
+}

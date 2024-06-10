@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SnapserProject500",
+			"Path": "..\\Source\\SnapserProject500.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SnapserProject500Editor",
+			"Path": "..\\Source\\SnapserProject500Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

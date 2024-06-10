@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SnapserProject540.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SnapserProject500.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SnapserProject500Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
+    <Filter Include="Plugins">
+      <UniqueIdentifier>{BB38096A-B391-30DC-A0D4-4F3EA6B44507}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SnapserPlugin">
+      <UniqueIdentifier>{709C0E2A-31A5-3E4D-B50F-D2CC826A9B78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SnapserPlugin\Source">
+      <UniqueIdentifier>{BA286C94-091D-3A19-9EFA-E244E31E5886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SnapserPlugin\Source\SnapserPlugin">
+      <UniqueIdentifier>{DD3DA00A-8CAC-3DE2-AB3F-298CEEE8BF74}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SnapserPlugin\Source\SnapserPlugin\SnapserPlugin.Build.cs">
+      <Filter>Plugins\SnapserPlugin\Source\SnapserPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\SnapserPlugin\Source\SnapserPlugin\Private">
+      <UniqueIdentifier>{606B09B4-0E1F-3669-AFF0-526E8F43E7E2}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\SnapserPlugin\Private\SnapserPlugin.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\SnapserPlugin\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\SnapserPlugin\Private\SnapserSubsystem.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\SnapserPlugin\Private</Filter>
+    </ClCompile>
+    <Filter Include="Plugins\SnapserPlugin\Source\SnapserPlugin\Public">
+      <UniqueIdentifier>{8F133D8D-F57D-3FA3-B475-0F6854FD3991}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\SnapserPlugin\Public\SnapserPlugin.h">
+      <Filter>Plugins\SnapserPlugin\Source\SnapserPlugin\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\SnapserPlugin\Public\SnapserSubsystem.h">
+      <Filter>Plugins\SnapserPlugin\Source\SnapserPlugin\Public</Filter>
+    </ClInclude>
+    <None Include="..\..\Plugins\SnapserPlugin\SnapserPlugin.uplugin">
+      <Filter>Plugins\SnapserPlugin</Filter>
+    </None>
+    <Filter Include="Plugins\SnapserPlugin\Resources">
+      <UniqueIdentifier>{3CC17493-041D-3C57-A001-33BD36C12F9D}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SnapserPlugin\Resources\Icon128.png">
+      <Filter>Plugins\SnapserPlugin\Resources</Filter>
+    </None>
+    <Filter Include="Plugins\SnapserPlugin\Source\ThirdParty">
+      <UniqueIdentifier>{7DA22B62-CF9D-3390-ACAF-9B641CA86CDD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4">
+      <UniqueIdentifier>{226F7820-4B7F-316B-9FE6-D84AE811C0DB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\.openapi-generator-ignore">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4</Filter>
+    </None>
+    <None Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Snapser.Build.cs">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4</Filter>
+    </None>
+    <Filter Include="Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\.openapi-generator">
+      <UniqueIdentifier>{CA623E97-5B20-37EF-BF55-1BE202380C21}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\.openapi-generator\FILES">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\.openapi-generator</Filter>
+    </None>
+    <None Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\.openapi-generator\VERSION">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\.openapi-generator</Filter>
+    </None>
+    <Filter Include="Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private">
+      <UniqueIdentifier>{C1DC44B0-C4D5-3D6E-91A7-A1438AD024D9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthAnonLoginRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthAnonLoginResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthAssociateLoginsRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthEmailLoginRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthEmailLoginResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthFacebookLoginRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthFacebookLoginResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthGetEmailsByUserIdsResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthGetUserResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthGetUsersResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthGoogleLoginRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthGoogleLoginResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthInviteUserResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthOtpRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthRefreshRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthRefreshResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthServiceApi.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthServiceApiOperations.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthUser.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthValidateRequest.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIAuthValidateResponse.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIBaseModel.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIErrorsApiError.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\OpenAPIHelpers.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\SnapserModule.cpp">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private\SnapserModule.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Private</Filter>
+    </ClInclude>
+    <Filter Include="Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public">
+      <UniqueIdentifier>{6A250AF1-65B1-3860-8679-DBF5BE825256}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthAnonLoginRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthAnonLoginResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthAssociateLoginsRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthEmailLoginRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthEmailLoginResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthFacebookLoginRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthFacebookLoginResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthGetEmailsByUserIdsResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthGetUserResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthGetUsersResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthGoogleLoginRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthGoogleLoginResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthInviteUserResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthOtpRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthRefreshRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthRefreshResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthServiceApi.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthServiceApiOperations.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthUser.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthValidateRequest.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIAuthValidateResponse.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIBaseModel.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIErrorsApiError.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public\OpenAPIHelpers.h">
+      <Filter>Plugins\SnapserPlugin\Source\ThirdParty\sdk-cpp-ue4\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\SnapserProject500">
+      <UniqueIdentifier>{59A4BC9C-818E-36C2-BF1D-AFF0B9BD2464}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SnapserProject500\SnapserProject500.Build.cs">
+      <Filter>Source\SnapserProject500</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SnapserProject500\SnapserProject500.cpp">
+      <Filter>Source\SnapserProject500</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnapserProject500\SnapserProject500.h">
+      <Filter>Source\SnapserProject500</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SnapserProject500\SnapserProject500GameModeBase.cpp">
+      <Filter>Source\SnapserProject500</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SnapserProject500\SnapserProject500GameModeBase.h">
+      <Filter>Source\SnapserProject500</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
