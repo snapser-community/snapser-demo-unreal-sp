@@ -72,13 +72,13 @@ Snapser Demo Game - Unreal Engine
 
 The Snapser Plugin for Unreal is a C++ plugin that interfaces with the Snapser C++ Module. It Exposes a Subsystem to Blueprint from where Nodes are available for Signing In and Out of the server. It also maintains a set of connection variables such as “IsBanned” and “IsValidated”. Along with this PDF, there is an example project that you should have received a download link to. The example project is also the build project for the plugin, it contains the C++ code for both the plugin, and the Snapser Module-so you will need to have Visual Studio Installed (you mentioned you built the module, so should be ok). Just unzip the download and navigate into the root folder, there is a “.sln” file - double-click that to open it in Visual Studio.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/1.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/1.png)
 
 
 You should be able to just build this project and run it to see the example. The demo level will load with some text - just play that level to do the SignIn.
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/2.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/2.png)
 
 
 ## Usage - Code Layout
@@ -88,7 +88,7 @@ You should be able to just build this project and run it to see the example. The
 
 2. The main Plugin Project is a C++ project, and has the plugin code, and the Snapser module code located in the “plugin” folder. Thisisthe only project that has to be C++ - once the plugin is compiled, it can be installed to Blueprint only Projects too.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/3.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/3.png)
 
 
 3. The plugin itself is just a simple SubSystem class based on the lifetime of the GameInstance - SnapserSubsystem.cpp. The SnapserPlugin.cpp file just handles the Startup and Shutdown of the plugin.
@@ -100,7 +100,7 @@ You should be able to just build this project and run it to see the example. The
 5. They’re just added to the “SnapserPlugin.Build.cs” file:
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/4.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/4.png)
 
 
 
@@ -108,14 +108,14 @@ You should be able to just build this project and run it to see the example. The
 
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/5.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/5.png)
 
 
 
 7. The plugin itself is not tied down to a specific version, but if you’re wanting to submit the plugin to the marketplace, you’ll needtohave a separate build for each version of UE. In the “.uplugin” file, you’ll need to add a engine version field such as:
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/6.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/6.png)
 
 
 
@@ -137,7 +137,7 @@ You should be able to just build this project and run it to see the example. The
 
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/7.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/7.png)
 
 
 3. You can get access to a “Snapser Subsystem” at any time by right-clicking in a blueprint and finding “snapser”.
@@ -146,7 +146,7 @@ You should be able to just build this project and run it to see the example. The
 
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/8.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/8.png)
 
 
 
@@ -160,7 +160,7 @@ You should be able to just build this project and run it to see the example. The
 
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/9.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/9.png)
 
 
 
@@ -168,12 +168,12 @@ You should be able to just build this project and run it to see the example. The
 
 5. If timeout is greater than zero, but “WaitingForResponse” is False - that means we’ve received a response fromthe server - theSnapser Subsystem will now contain the details the server sent.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/10.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/10.png)
 
 
 6. There is also the OtpSignIn Node which accepts an email address. This system does not contain all the data the AnonSignIndoes-just if it succeeded.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/c97e46ae109fdf7f16c5ff7671c3c0a31f62f61f/Docs/Images/11.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/11.png)
 
 
 That’s it. Just play the test level to do a SignIn, log details and SignOut.
