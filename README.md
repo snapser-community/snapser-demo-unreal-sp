@@ -27,17 +27,17 @@ Snapser Demo Game - Unreal Engine
     5. Storage
 
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/createproject.gif)
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/addsnaps.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/createproject.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/addsnaps.gif)
 
 
 3. Follow the rest of the steps to create your snapend.
 4. Please note that it will take a few minutes to create your snapend.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/creatingsnapendpopup.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/creatingsnapendpopup.gif)
 5. Once created, you will see your snapend ready in your dashboard.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/4bac758225ee8a6b951fb77e128e2d81c9de0591/Docs/Images/Screenshot%202023-10-26%20204840.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/4bac758225ee8a6b951fb77e128e2d81c9de0591/Docs/Images/Screenshot%202023-10-26%20204840.png)
 
 
 6. From this dashboard, you can manage your snapend, download the sdk for your specific platform, access admin tools to update your snaps specific to your game, access api explorer etc.
@@ -46,24 +46,24 @@ Snapser Demo Game - Unreal Engine
 
 1. You can configure your individual snaps from the Admin Tools for your individual snapend.
 
-![alt_text](https://github.com/snapser-engine/unity-demo-igdc/blob/main/Docs/Images/AdminToolsIntro.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/AdminToolsIntro.png)
 
 
 2. For this demo, we are going to use anonymous login which is the easiest way to set up authentication for your game. You can choose to have alternate method such as email, facebook, google etc.
 3. Just add an anon connector under ‘Add an connector’’
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/anonconnector.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/anonconnector.gif)
 
 
 4. Similarly, configure profiles, statistics, storage and leaderboards as follows
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/profileconnector.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/profileconnector.gif)
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/statsconnector.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/statsconnector.gif)
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/storageconnector.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/storageconnector.gif)
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unity-sp/blob/main/Docs/Gifs/leaderboardconnector.gif)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/leaderboardconnector.gif)
 
 ## Download Project
 
