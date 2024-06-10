@@ -37,7 +37,7 @@ Snapser Demo Game - Unreal Engine
 ![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Gifs/creatingsnapendpopup.gif)
 5. Once created, you will see your snapend ready in your dashboard.
 
-![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/4bac758225ee8a6b951fb77e128e2d81c9de0591/Docs/Images/Screenshot%202023-10-26%20204840.png)
+![alt_text](https://github.com/snapser-community/snapser-demo-unreal-sp/blob/main/Docs/Images/Screenshot%202023-10-26%20204840.png)
 
 
 6. From this dashboard, you can manage your snapend, download the sdk for your specific platform, access admin tools to update your snaps specific to your game, access api explorer etc.
