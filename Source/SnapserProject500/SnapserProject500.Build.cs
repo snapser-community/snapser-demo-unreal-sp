@@ -8,7 +8,7 @@ public class SnapserProject500 : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "Snapser" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

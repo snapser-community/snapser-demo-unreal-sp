@@ -3,8 +3,8 @@
 
 #include "Subsystems/GameInstanceSubsystem.h"
 #include "HttpModule.h"
-#include "ThirdParty/sdk-cpp-ue4/Public/OpenAPIAuthServiceAPI.h"
-#include "ThirdParty/sdk-cpp-ue4/Public/OpenAPIAuthServiceApiOperations.h"
+#include "ThirdParty/sdk-cpp-ue4/Public/SnapserAuthServiceAPI.h"
+#include "ThirdParty/sdk-cpp-ue4/Public/SnapserAuthServiceApiOperations.h"
 #include "SnapserSubsystem.generated.h"
 
 UENUM()
@@ -73,13 +73,13 @@ protected:
 
 private:
 
-	Snapser::OpenAPIAuthServiceApi snap;
+	Snapser::SnapserAuthServiceApi snap;
 
-	void	httpRequestCompleteAnon(const Snapser::OpenAPIAuthServiceApi::AnonLoginResponse& response);
-	Snapser::OpenAPIAuthServiceApi::FAnonLoginDelegate completeDelegateAnon;
+	void	httpRequestCompleteAnon(const Snapser::SnapserAuthServiceApi::AnonLoginResponse& response);
+	Snapser::SnapserAuthServiceApi::FAnonLoginDelegate completeDelegateAnon;
 
-	void	httpRequestCompleteOtp(const Snapser::OpenAPIAuthServiceApi::OtpResponse& response);
-	Snapser::OpenAPIAuthServiceApi::FOtpDelegate completeDelegateOtp;
+	void	httpRequestCompleteOtp(const Snapser::SnapserAuthServiceApi::OtpResponse& response);
+	Snapser::SnapserAuthServiceApi::FOtpDelegate completeDelegateOtp;
 
 	FString			responseString;
 	int32			responseCode;

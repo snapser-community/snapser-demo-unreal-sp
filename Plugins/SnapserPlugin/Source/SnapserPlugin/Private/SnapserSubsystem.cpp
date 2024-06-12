@@ -27,7 +27,7 @@ USnapserSubsystem::USnapserSubsystem():bWaitingForResponse(false),bSignedIn(fals
 // This gets called once Snapser receives an HttpRequestComplete event and contains information
 // on whether the SignIn was sucessful - this Hook is for the Anon SignIn
 //.................................................................................................
-void USnapserSubsystem::httpRequestCompleteAnon(const Snapser::OpenAPIAuthServiceApi::AnonLoginResponse& response) {
+void USnapserSubsystem::httpRequestCompleteAnon(const Snapser::SnapserAuthServiceApi::AnonLoginResponse& response) {
 
 	bSignedIn=response.IsSuccessful();
 	responseCode=(int32)response.GetHttpResponseCode(); // EHttpResponseCodes
@@ -69,7 +69,7 @@ void USnapserSubsystem::httpRequestCompleteAnon(const Snapser::OpenAPIAuthServic
 //
 // Hook that gets called when the server replies from an Otp SignIn
 //.................................................................................................
-void USnapserSubsystem::httpRequestCompleteOtp(const Snapser::OpenAPIAuthServiceApi::OtpResponse& response) {
+void USnapserSubsystem::httpRequestCompleteOtp(const Snapser::SnapserAuthServiceApi::OtpResponse& response) {
 
 	bSignedIn=response.IsSuccessful();
 	responseCode=(int32)response.GetHttpResponseCode(); // EHttpResponseCodes
@@ -98,7 +98,7 @@ bool USnapserSubsystem::AnonSignIn(const FString& name,bool create) {
 	FHttpModule& httpModule=FModuleManager::LoadModuleChecked<FHttpModule>("HTTP");
 	FHttpRequestRef httpReq=httpModule.Get().CreateRequest();
 
-	Snapser::OpenAPIAuthServiceApi::AnonLoginRequest request;
+	Snapser::SnapserAuthServiceApi::AnonLoginRequest request;
 	request.Body.CreateUser=create;
 	request.Body.Username=name;
 	request.SetupHttpRequest(httpReq);
@@ -129,7 +129,7 @@ bool USnapserSubsystem::OtpSignIn(const FString& email) {
 	FHttpModule& httpModule=FModuleManager::LoadModuleChecked<FHttpModule>("HTTP");
 	FHttpRequestRef httpReq=httpModule.Get().CreateRequest();
 
-	Snapser::OpenAPIAuthServiceApi::OtpRequest request;
+	Snapser::SnapserAuthServiceApi::OtpRequest request;
 	request.Body.Email=email;
 	request.SetupHttpRequest(httpReq);
 
@@ -156,7 +156,7 @@ bool USnapserSubsystem::OtpSignIn(const FString& email) {
 //.................................................................................................
 void USnapserSubsystem::SignOut() {
 
-	Snapser::OpenAPIAuthServiceApi::LogoutRequest request;
+	Snapser::SnapserAuthServiceApi::LogoutRequest request;
 	request.Token=sessionToken; // Session token to logout
 	request.Token2=sessionToken; // Logged in user's session token
 
