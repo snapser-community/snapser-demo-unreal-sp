@@ -4,6 +4,7 @@ Saved/
 
 # Ignore Visual Studio files
 .vs/
+.vscode/
 
 # Ignore compiled binaries
 Binaries/
