@@ -1,5 +1,7 @@
 # Ignore intermediate files
-Intermediate/
+Intermediate/ShaderAutogen
+Intermediate/Build
+Intermediate/ReimportCache
 Saved/
 
 # Ignore Visual Studio files
