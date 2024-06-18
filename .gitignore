@@ -1,0 +1,66 @@
+# Ignore intermediate files
+Intermediate/
+Saved/
+
+# Ignore Visual Studio files
+.vs/
+
+# Ignore compiled binaries
+Binaries/
+
+# Ignore logs and crash reports
+*.log
+*.ini
+*.sav
+*.bak
+*.dmp
+
+# Ignore user-specific directories
+DerivedDataCache/
+IntermediateSaveGames/
+Saved/
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Android specific files
+Build/Android/
+
+# Ignore iOS specific files
+Build/IOS/
+
+# Ignore HTML5 specific files
+Build/HTML5/
+
+# Ignore Linux specific files
+Build/Linux/
+
+# Ignore Windows specific files
+Build/Windows/
+
+# Ignore Content folders
+Content/
+
+# Ignore swarm connection files
+*.swarm
+
+# Ignore .NET Core files
+Binaries/DotNET/
+
+# Ignore profiling data
+*.uprof
+
+# Ignore Unreal Editor autosaves
+Autosaves/
+
+# Ignore saved cooked data
+CookedData/
+
+# Ignore macOS hidden files
+._*
+
+# Ignore backup files
+*.backup
+
+Plugins/SnapserPlugin/Intermediate/
+Plugins/SnapserPlugin/Binaries/
