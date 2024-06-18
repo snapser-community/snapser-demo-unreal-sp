@@ -42,7 +42,7 @@ Build/Linux/
 Build/Windows/
 
 # Ignore Content folders
-Content/
+# Content/
 
 # Ignore swarm connection files
 *.swarm
