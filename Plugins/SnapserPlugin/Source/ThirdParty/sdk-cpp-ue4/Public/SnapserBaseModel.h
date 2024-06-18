@@ -35,6 +35,8 @@ struct SNAPSER_API HttpRetryManager
 #endif
 {
 	using FManager::FManager;
+
+	bool Tick(float DeltaTime) final;
 };
 
 struct SNAPSER_API HttpRetryParams

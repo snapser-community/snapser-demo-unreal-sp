@@ -1,8 +1,0 @@
-{
-	"BuildId": "33043543",
-	"Modules": 
-	{
-		"Snapser": "UnrealEditor-Snapser-Win64-DebugGame.dll",
-		"SnapserPlugin": "UnrealEditor-SnapserPlugin-Win64-DebugGame.dll"
-	}
-}
