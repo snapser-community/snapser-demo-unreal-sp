@@ -1,0 +1,659 @@
+{
+  "version": "v1",
+  "id": "mm3mebua",
+  "name": "my-dev-cluster",
+  "environment": "DEVELOPMENT",
+  "service_definitions": [
+    {
+      "id": "analytics",
+      "language": "go",
+      "version": "v0.46.0",
+      "author_id": "snapser",
+      "category": "SNAPSER",
+      "subcategory": "SERVICE",
+      "data_dependencies": [
+        {
+          "type": "POSTGRES",
+          "postgres": {
+            "database": "analytics"
+          }
+        },
+        {
+          "type": "POSTGRES",
+          "postgres": {
+            "database": "analytics_settings"
+          }
+        }
+      ]
+    },
+    {
+      "id": "auth",
+      "language": "go",
+      "version": "v0.47.0",
+      "author_id": "snapser",
+      "category": "SNAPSER",
+      "subcategory": "SERVICE",
+      "data_dependencies": [
+        {
+          "type": "POSTGRES",
+          "postgres": {
+            "database": "auth"
+          }
+        },
+        {
+          "type": "POSTGRES",
+          "postgres": {
+            "database": "auth_settings"
+          }
+        },
+        {
+          "type": "REDIS",
+          "redis": {}
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "id": "analytics",
+      "data": {
+        "events": [
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_campaign_runs",
+            "properties": [
+              {
+                "name": "campaign_id",
+                "type": "number"
+              },
+              {
+                "name": "started_at",
+                "type": "timestamp"
+              },
+              {
+                "name": "ended_at",
+                "type": "timestamp"
+              },
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "name": "successes",
+                "type": "number"
+              },
+              {
+                "name": "failures",
+                "type": "number"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "app"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_campaign_notification_events",
+            "properties": [
+              {
+                "name": "campaign_id",
+                "type": "number"
+              },
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "name": "action",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_iap_purchases",
+            "properties": [
+              {
+                "name": "bundle_name",
+                "type": "string"
+              },
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "name": "quantity",
+                "type": "number"
+              },
+              {
+                "name": "price",
+                "type": "number"
+              },
+              {
+                "name": "currency",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_advertisements",
+            "properties": [
+              {
+                "name": "type",
+                "type": "string"
+              },
+              {
+                "name": "action",
+                "type": "string"
+              },
+              {
+                "name": "placement",
+                "type": "string"
+              },
+              {
+                "name": "provider",
+                "type": "string"
+              },
+              {
+                "name": "failure_reason",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_errors",
+            "properties": [
+              {
+                "name": "error_message",
+                "type": "string"
+              },
+              {
+                "name": "error_ts",
+                "type": "timestamp"
+              },
+              {
+                "name": "severity",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_sessions",
+            "properties": [
+              {
+                "name": "action",
+                "type": "string"
+              },
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "name": "device",
+                "type": "string"
+              },
+              {
+                "name": "location",
+                "type": "string"
+              },
+              {
+                "name": "agent",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_milestones",
+            "properties": [
+              {
+                "name": "milestone_name",
+                "type": "string"
+              },
+              {
+                "name": "milestone_date",
+                "type": "string"
+              },
+              {
+                "name": "milestone_ts",
+                "type": "timestamp"
+              },
+              {
+                "name": "milestone_step",
+                "type": "number"
+              },
+              {
+                "name": "client",
+                "type": "string"
+              },
+              {
+                "name": "server_ts",
+                "type": "timestamp"
+              },
+              {
+                "name": "client_ts",
+                "type": "timestamp"
+              },
+              {
+                "name": "category",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_payments",
+            "properties": [
+              {
+                "name": "txn_id",
+                "type": "string"
+              },
+              {
+                "name": "payment_method",
+                "type": "string"
+              },
+              {
+                "name": "currency_name",
+                "type": "string"
+              },
+              {
+                "name": "currency_value",
+                "type": "number"
+              },
+              {
+                "name": "value_usd",
+                "type": "number"
+              },
+              {
+                "name": "category",
+                "type": "string"
+              },
+              {
+                "name": "subcategory",
+                "type": "string"
+              },
+              {
+                "name": "server_ts",
+                "type": "number"
+              },
+              {
+                "name": "client_ts",
+                "type": "number"
+              },
+              {
+                "name": "status",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_economy",
+            "properties": [
+              {
+                "name": "currency_name",
+                "type": "string"
+              },
+              {
+                "name": "current_value",
+                "type": "number"
+              },
+              {
+                "name": "delta",
+                "type": "number"
+              },
+              {
+                "name": "direction",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_segments",
+            "properties": [
+              {
+                "name": "segment_name",
+                "type": "string"
+              },
+              {
+                "name": "direction",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_experiments",
+            "properties": [
+              {
+                "name": "experiment_name",
+                "type": "string"
+              },
+              {
+                "name": "variant_name",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_logins",
+            "properties": [
+              {
+                "name": "ip",
+                "type": "string"
+              },
+              {
+                "name": "location",
+                "type": "string"
+              },
+              {
+                "name": "device",
+                "type": "string"
+              },
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "name": "agent",
+                "type": "string"
+              },
+              {
+                "name": "login_type",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          },
+          {
+            "created_at": "1744352511",
+            "is_snap_event": true,
+            "name": "snap_installs",
+            "properties": [
+              {
+                "name": "ip",
+                "type": "string"
+              },
+              {
+                "name": "location",
+                "type": "string"
+              },
+              {
+                "name": "device",
+                "type": "string"
+              },
+              {
+                "name": "platform",
+                "type": "string"
+              },
+              {
+                "name": "agent",
+                "type": "string"
+              },
+              {
+                "name": "login_type",
+                "type": "string"
+              }
+            ],
+            "sample_rate": 100,
+            "type": "user"
+          }
+        ],
+        "reports": [
+          {
+            "created_at": "1744352511",
+            "last_run_at": "0",
+            "name": "snap_dau",
+            "query": "select count(distinct user_id) as dau, platform, date_trunc('day', created_at) as day from user_snap_logins where created_at >= now() - interval '7 days' group by day, platform order by day desc;",
+            "recipients": [],
+            "results": "{}",
+            "run_interval": "",
+            "updated_at": "1744352511"
+          }
+        ]
+      },
+      "version": "v0.46.0",
+      "exported_at": "1744355469"
+    },
+    {
+      "id": "auth",
+      "data": {
+        "dev": {
+          "anon": {
+            "enabled": true
+          },
+          "api_keys": [],
+          "app_auth": {
+            "enabled": false
+          },
+          "app_verify": {
+            "client_secret": "",
+            "enabled": false
+          },
+          "apple": {
+            "enabled": false,
+            "key_id": "",
+            "private_key": "",
+            "service_id": "",
+            "team_id": ""
+          },
+          "email": {
+            "enabled": false,
+            "otp_length": 0,
+            "otp_rate_limit_settings": {
+              "allow_list": [],
+              "deny_list": [],
+              "duration_in_seconds": 60,
+              "limit": 5,
+              "lockout_duration_in_seconds": 60
+            },
+            "otp_validity": 0
+          },
+          "epic": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "facebook": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "google": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "password": {
+            "enabled": false
+          },
+          "session_inactivity_timeout": 604800,
+          "session_token_validity": 2592000,
+          "steam": {
+            "api_key": "",
+            "app_id": 0,
+            "enabled": false,
+            "publisher_api_key": "",
+            "web_api_key": ""
+          },
+          "user_auth_restrictions": [],
+          "xbox": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          }
+        },
+        "prod": {
+          "anon": {
+            "enabled": false
+          },
+          "api_keys": [],
+          "app_auth": {
+            "enabled": false
+          },
+          "app_verify": {
+            "client_secret": "",
+            "enabled": false
+          },
+          "apple": {
+            "enabled": false,
+            "key_id": "",
+            "private_key": "",
+            "service_id": "",
+            "team_id": ""
+          },
+          "email": {
+            "enabled": false,
+            "otp_length": 0,
+            "otp_rate_limit_settings": {
+              "allow_list": [],
+              "deny_list": [],
+              "duration_in_seconds": 60,
+              "limit": 5,
+              "lockout_duration_in_seconds": 60
+            },
+            "otp_validity": 0
+          },
+          "epic": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "facebook": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "google": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "password": {
+            "enabled": false
+          },
+          "session_inactivity_timeout": 604800,
+          "session_token_validity": 2592000,
+          "steam": {
+            "api_key": "",
+            "app_id": 0,
+            "enabled": false,
+            "publisher_api_key": "",
+            "web_api_key": ""
+          },
+          "user_auth_restrictions": [],
+          "xbox": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          }
+        },
+        "stage": {
+          "anon": {
+            "enabled": false
+          },
+          "api_keys": [],
+          "app_auth": {
+            "enabled": false
+          },
+          "app_verify": {
+            "client_secret": "",
+            "enabled": false
+          },
+          "apple": {
+            "enabled": false,
+            "key_id": "",
+            "private_key": "",
+            "service_id": "",
+            "team_id": ""
+          },
+          "email": {
+            "enabled": false,
+            "otp_length": 0,
+            "otp_rate_limit_settings": {
+              "allow_list": [],
+              "deny_list": [],
+              "duration_in_seconds": 60,
+              "limit": 5,
+              "lockout_duration_in_seconds": 60
+            },
+            "otp_validity": 0
+          },
+          "epic": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "facebook": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "google": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          },
+          "password": {
+            "enabled": false
+          },
+          "session_inactivity_timeout": 604800,
+          "session_token_validity": 2592000,
+          "steam": {
+            "api_key": "",
+            "app_id": 0,
+            "enabled": false,
+            "publisher_api_key": "",
+            "web_api_key": ""
+          },
+          "user_auth_restrictions": [],
+          "xbox": {
+            "client_id": "",
+            "client_secret": "",
+            "enabled": false
+          }
+        }
+      },
+      "version": "v0.47.0",
+      "exported_at": "1744355469"
+    }
+  ],
+  "applied_configuration": "{\"version\":\"v1\", \"id\":\"mm3mebua\", \"name\":\"my-dev-cluster\", \"environment\":\"DEVELOPMENT\", \"service_definitions\":[{\"id\":\"analytics\", \"language\":\"go\", \"version\":\"v0.46.0\", \"author_id\":\"snapser\", \"category\":\"SNAPSER\", \"subcategory\":\"SERVICE\", \"data_dependencies\":[{\"type\":\"POSTGRES\", \"postgres\":{\"database\":\"analytics\"}}, {\"type\":\"POSTGRES\", \"postgres\":{\"database\":\"analytics_settings\"}}]}, {\"id\":\"auth\", \"language\":\"go\", \"version\":\"v0.47.0\", \"author_id\":\"snapser\", \"category\":\"SNAPSER\", \"subcategory\":\"SERVICE\", \"data_dependencies\":[{\"type\":\"POSTGRES\", \"postgres\":{\"database\":\"auth\"}}, {\"type\":\"POSTGRES\", \"postgres\":{\"database\":\"auth_settings\"}}, {\"type\":\"REDIS\", \"redis\":{}}]}], \"settings\":[{\"id\":\"analytics\", \"data\":{\"events\":[{\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_campaign_runs\", \"properties\":[{\"name\":\"campaign_id\", \"type\":\"number\"}, {\"name\":\"started_at\", \"type\":\"timestamp\"}, {\"name\":\"ended_at\", \"type\":\"timestamp\"}, {\"name\":\"platform\", \"type\":\"string\"}, {\"name\":\"successes\", \"type\":\"number\"}, {\"name\":\"failures\", \"type\":\"number\"}], \"sample_rate\":100, \"type\":\"app\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_campaign_notification_events\", \"properties\":[{\"name\":\"campaign_id\", \"type\":\"number\"}, {\"name\":\"platform\", \"type\":\"string\"}, {\"name\":\"action\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_iap_purchases\", \"properties\":[{\"name\":\"bundle_name\", \"type\":\"string\"}, {\"name\":\"platform\", \"type\":\"string\"}, {\"name\":\"quantity\", \"type\":\"number\"}, {\"name\":\"price\", \"type\":\"number\"}, {\"name\":\"currency\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_advertisements\", \"properties\":[{\"name\":\"type\", \"type\":\"string\"}, {\"name\":\"action\", \"type\":\"string\"}, {\"name\":\"placement\", \"type\":\"string\"}, {\"name\":\"provider\", \"type\":\"string\"}, {\"name\":\"failure_reason\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_errors\", \"properties\":[{\"name\":\"error_message\", \"type\":\"string\"}, {\"name\":\"error_ts\", \"type\":\"timestamp\"}, {\"name\":\"severity\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_sessions\", \"properties\":[{\"name\":\"action\", \"type\":\"string\"}, {\"name\":\"platform\", \"type\":\"string\"}, {\"name\":\"device\", \"type\":\"string\"}, {\"name\":\"location\", \"type\":\"string\"}, {\"name\":\"agent\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_milestones\", \"properties\":[{\"name\":\"milestone_name\", \"type\":\"string\"}, {\"name\":\"milestone_date\", \"type\":\"string\"}, {\"name\":\"milestone_ts\", \"type\":\"timestamp\"}, {\"name\":\"milestone_step\", \"type\":\"number\"}, {\"name\":\"client\", \"type\":\"string\"}, {\"name\":\"server_ts\", \"type\":\"timestamp\"}, {\"name\":\"client_ts\", \"type\":\"timestamp\"}, {\"name\":\"category\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_payments\", \"properties\":[{\"name\":\"txn_id\", \"type\":\"string\"}, {\"name\":\"payment_method\", \"type\":\"string\"}, {\"name\":\"currency_name\", \"type\":\"string\"}, {\"name\":\"currency_value\", \"type\":\"number\"}, {\"name\":\"value_usd\", \"type\":\"number\"}, {\"name\":\"category\", \"type\":\"string\"}, {\"name\":\"subcategory\", \"type\":\"string\"}, {\"name\":\"server_ts\", \"type\":\"number\"}, {\"name\":\"client_ts\", \"type\":\"number\"}, {\"name\":\"status\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_economy\", \"properties\":[{\"name\":\"currency_name\", \"type\":\"string\"}, {\"name\":\"current_value\", \"type\":\"number\"}, {\"name\":\"delta\", \"type\":\"number\"}, {\"name\":\"direction\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_segments\", \"properties\":[{\"name\":\"segment_name\", \"type\":\"string\"}, {\"name\":\"direction\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_experiments\", \"properties\":[{\"name\":\"experiment_name\", \"type\":\"string\"}, {\"name\":\"variant_name\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_logins\", \"properties\":[{\"name\":\"ip\", \"type\":\"string\"}, {\"name\":\"location\", \"type\":\"string\"}, {\"name\":\"device\", \"type\":\"string\"}, {\"name\":\"platform\", \"type\":\"string\"}, {\"name\":\"agent\", \"type\":\"string\"}, {\"name\":\"login_type\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}, {\"created_at\":\"1744352511\", \"is_snap_event\":true, \"name\":\"snap_installs\", \"properties\":[{\"name\":\"ip\", \"type\":\"string\"}, {\"name\":\"location\", \"type\":\"string\"}, {\"name\":\"device\", \"type\":\"string\"}, {\"name\":\"platform\", \"type\":\"string\"}, {\"name\":\"agent\", \"type\":\"string\"}, {\"name\":\"login_type\", \"type\":\"string\"}], \"sample_rate\":100, \"type\":\"user\"}], \"reports\":[{\"created_at\":\"1744352511\", \"last_run_at\":\"0\", \"name\":\"snap_dau\", \"query\":\"select count(distinct user_id) as dau, platform, date_trunc('day', created_at) as day from user_snap_logins where created_at >= now() - interval '7 days' group by day, platform order by day desc;\", \"recipients\":[], \"results\":\"{}\", \"run_interval\":\"\", \"updated_at\":\"1744352511\"}]}, \"version\":\"v0.46.0\", \"exported_at\":\"1744355469\"}, {\"id\":\"auth\", \"data\":{\"dev\":{\"anon\":{\"enabled\":true}, \"api_keys\":[], \"app_auth\":{\"enabled\":false}, \"app_verify\":{\"client_secret\":\"\", \"enabled\":false}, \"apple\":{\"enabled\":false, \"key_id\":\"\", \"private_key\":\"\", \"service_id\":\"\", \"team_id\":\"\"}, \"email\":{\"enabled\":false, \"otp_length\":0, \"otp_rate_limit_settings\":{\"allow_list\":[], \"deny_list\":[], \"duration_in_seconds\":60, \"limit\":5, \"lockout_duration_in_seconds\":60}, \"otp_validity\":0}, \"epic\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"facebook\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"google\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"password\":{\"enabled\":false}, \"session_inactivity_timeout\":604800, \"session_token_validity\":2592000, \"steam\":{\"api_key\":\"\", \"app_id\":0, \"enabled\":false, \"publisher_api_key\":\"\", \"web_api_key\":\"\"}, \"user_auth_restrictions\":[], \"xbox\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}}, \"prod\":{\"anon\":{\"enabled\":false}, \"api_keys\":[], \"app_auth\":{\"enabled\":false}, \"app_verify\":{\"client_secret\":\"\", \"enabled\":false}, \"apple\":{\"enabled\":false, \"key_id\":\"\", \"private_key\":\"\", \"service_id\":\"\", \"team_id\":\"\"}, \"email\":{\"enabled\":false, \"otp_length\":0, \"otp_rate_limit_settings\":{\"allow_list\":[], \"deny_list\":[], \"duration_in_seconds\":60, \"limit\":5, \"lockout_duration_in_seconds\":60}, \"otp_validity\":0}, \"epic\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"facebook\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"google\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"password\":{\"enabled\":false}, \"session_inactivity_timeout\":604800, \"session_token_validity\":2592000, \"steam\":{\"api_key\":\"\", \"app_id\":0, \"enabled\":false, \"publisher_api_key\":\"\", \"web_api_key\":\"\"}, \"user_auth_restrictions\":[], \"xbox\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}}, \"stage\":{\"anon\":{\"enabled\":false}, \"api_keys\":[], \"app_auth\":{\"enabled\":false}, \"app_verify\":{\"client_secret\":\"\", \"enabled\":false}, \"apple\":{\"enabled\":false, \"key_id\":\"\", \"private_key\":\"\", \"service_id\":\"\", \"team_id\":\"\"}, \"email\":{\"enabled\":false, \"otp_length\":0, \"otp_rate_limit_settings\":{\"allow_list\":[], \"deny_list\":[], \"duration_in_seconds\":60, \"limit\":5, \"lockout_duration_in_seconds\":60}, \"otp_validity\":0}, \"epic\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"facebook\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"google\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}, \"password\":{\"enabled\":false}, \"session_inactivity_timeout\":604800, \"session_token_validity\":2592000, \"steam\":{\"api_key\":\"\", \"app_id\":0, \"enabled\":false, \"publisher_api_key\":\"\", \"web_api_key\":\"\"}, \"user_auth_restrictions\":[], \"xbox\":{\"client_id\":\"\", \"client_secret\":\"\", \"enabled\":false}}}, \"version\":\"v0.47.0\", \"exported_at\":\"1744355469\"}]}"
+}
