@@ -3,6 +3,7 @@ Intermediate/ShaderAutogen
 Intermediate/Build
 Intermediate/ReimportCache
 Saved/
+Intermediate/
 
 # Ignore Visual Studio files
 .vs/
