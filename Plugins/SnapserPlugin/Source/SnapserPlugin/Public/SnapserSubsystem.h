@@ -75,11 +75,11 @@ private:
 
 	Snapser::SnapserAuthServiceApi snap;
 
-	void	httpRequestCompleteAnon(const Snapser::SnapserAuthServiceApi::AnonLoginResponse& response);
-	Snapser::SnapserAuthServiceApi::FAnonLoginDelegate completeDelegateAnon;
+	void	httpRequestCompleteAnon(const Snapser::SnapserAuthServiceApi::AuthAnonLoginResponse& response);
+	Snapser::SnapserAuthServiceApi::FAuthAnonLoginDelegate completeDelegateAnon;
 
-	void	httpRequestCompleteOtp(const Snapser::SnapserAuthServiceApi::OtpResponse& response);
-	Snapser::SnapserAuthServiceApi::FOtpDelegate completeDelegateOtp;
+	void	httpRequestCompleteOtp(const Snapser::SnapserAuthServiceApi::AuthOtpResponse& response);
+	Snapser::SnapserAuthServiceApi::FAuthOtpDelegate completeDelegateOtp;
 
 	FString			responseString;
 	int32			responseCode;

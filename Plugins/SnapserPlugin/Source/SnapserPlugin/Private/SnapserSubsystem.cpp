@@ -27,7 +27,7 @@ USnapserSubsystem::USnapserSubsystem():bWaitingForResponse(false),bSignedIn(fals
 // This gets called once Snapser receives an HttpRequestComplete event and contains information
 // on whether the SignIn was sucessful - this Hook is for the Anon SignIn
 //.................................................................................................
-void USnapserSubsystem::httpRequestCompleteAnon(const Snapser::SnapserAuthServiceApi::AnonLoginResponse& response) {
+void USnapserSubsystem::httpRequestCompleteAnon(const Snapser::SnapserAuthServiceApi::AuthAnonLoginResponse& response) {
 
 	bSignedIn=response.IsSuccessful();
 	responseCode=(int32)response.GetHttpResponseCode(); // EHttpResponseCodes
@@ -69,7 +69,7 @@ void USnapserSubsystem::httpRequestCompleteAnon(const Snapser::SnapserAuthServic
 //
 // Hook that gets called when the server replies from an Otp SignIn
 //.................................................................................................
-void USnapserSubsystem::httpRequestCompleteOtp(const Snapser::SnapserAuthServiceApi::OtpResponse& response) {
+void USnapserSubsystem::httpRequestCompleteOtp(const Snapser::SnapserAuthServiceApi::AuthOtpResponse& response) {
 
 	bSignedIn=response.IsSuccessful();
 	responseCode=(int32)response.GetHttpResponseCode(); // EHttpResponseCodes
@@ -92,13 +92,12 @@ void USnapserSubsystem::httpRequestCompleteOtp(const Snapser::SnapserAuthService
 // a static class of the Snapser module.
 //.................................................................................................
 bool USnapserSubsystem::AnonSignIn(const FString& name,bool create) {
-
-	UE_LOG(LogTemp,Display,TEXT("SignIn (UE5.4): Anon..."));//@@
+	UE_LOG(LogTemp,Display,TEXT("SignIn AJ (UE5.4): Anon v4..."));//@@ 
 
 	FHttpModule& httpModule=FModuleManager::LoadModuleChecked<FHttpModule>("HTTP");
 	FHttpRequestRef httpReq=httpModule.Get().CreateRequest();
 
-	Snapser::SnapserAuthServiceApi::AnonLoginRequest request;
+	Snapser::SnapserAuthServiceApi::AuthAnonLoginRequest request;
 	request.Body.CreateUser=create;
 	request.Body.Username=name;
 	request.SetupHttpRequest(httpReq);
@@ -112,7 +111,7 @@ bool USnapserSubsystem::AnonSignIn(const FString& name,bool create) {
 	id=TEXT("");
 	signinMode=SIGNINMODE_NONE;
 
-	FHttpRequestPtr ptr=snap.AnonLogin(request,completeDelegateAnon);
+	FHttpRequestPtr ptr=snap.AuthAnonLogin(request,completeDelegateAnon);
 
 	UE_LOG(LogTemp,Display,TEXT("done."));//@@
 
@@ -129,7 +128,7 @@ bool USnapserSubsystem::OtpSignIn(const FString& email) {
 	FHttpModule& httpModule=FModuleManager::LoadModuleChecked<FHttpModule>("HTTP");
 	FHttpRequestRef httpReq=httpModule.Get().CreateRequest();
 
-	Snapser::SnapserAuthServiceApi::OtpRequest request;
+	Snapser::SnapserAuthServiceApi::AuthOtpRequest request;
 	request.Body.Email=email;
 	request.SetupHttpRequest(httpReq);
 
@@ -142,7 +141,7 @@ bool USnapserSubsystem::OtpSignIn(const FString& email) {
 	id=TEXT("");
 	signinMode=SIGNINMODE_NONE;
 
-	FHttpRequestPtr ptr=snap.Otp(request,completeDelegateOtp);
+	FHttpRequestPtr ptr=snap.AuthOtp(request,completeDelegateOtp);
 
 	UE_LOG(LogTemp,Display,TEXT("done."));//@@
 
@@ -156,11 +155,11 @@ bool USnapserSubsystem::OtpSignIn(const FString& email) {
 //.................................................................................................
 void USnapserSubsystem::SignOut() {
 
-	Snapser::SnapserAuthServiceApi::LogoutRequest request;
+	Snapser::SnapserAuthServiceApi::AuthLogoutRequest request;
 	request.Token=sessionToken; // Session token to logout
 	request.Token2=sessionToken; // Logged in user's session token
 
-	snap.Logout(request);//, const FLogoutDelegate& Delegate
+	snap.AuthLogout(request);//, const FLogoutDelegate& Delegate
 
 	// reset all the connection details
 	bSignedIn=false;
